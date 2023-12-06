@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: lecture
+dependency_overrides:
+  lecture:
+    path: ../lecture

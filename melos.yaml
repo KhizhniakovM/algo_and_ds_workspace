@@ -1,0 +1,14 @@
+name: algo_and_ds
+
+packages:
+  - packages/**
+
+sdkPath: .fvm/flutter_sdk
+
+scripts:
+  analyze:
+    exec: dart analyze .
+
+ide:
+  intellij:
+    enabled: false
