@@ -5,19 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "console_app",
-      "cwd": "packages/console_app",
-      "request": "launch",
-      "type": "dart",
-      "console": "externalTerminal",
-      "program": "bin/console_app.dart",
-    },
-    {
-      "name": "lecture",
+      "name": "launch",
       "cwd": "packages/lecture",
       "request": "launch",
       "type": "dart",
       "program": "bin/lecture.dart",
+      // "console": "externalTerminal",
     },
   ]
 }
