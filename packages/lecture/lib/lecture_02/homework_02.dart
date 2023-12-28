@@ -6,11 +6,14 @@ import 'package:tester/tester.dart';
 
 FutureOr<void> launch() {
   final task = HappyTicketsTask();
-  final tester = Tester(task, 'assets/happy_tickets/1.Tickets/');
+  final tester = Tester(task);
   tester.run();
 }
 
 class HappyTicketsTask implements Task {
+  @override
+  String get path => 'assets/happy_tickets/';
+  
   @override
   String run(List<String> data) {
     final input = int.tryParse(data[0]);
