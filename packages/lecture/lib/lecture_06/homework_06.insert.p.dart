@@ -12,7 +12,7 @@ class InsertionSortRandomTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.insertionSort();
@@ -31,7 +31,7 @@ class InsertionSortDigitsTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.insertionSort();
@@ -50,7 +50,7 @@ class InsertionSortSortedTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.insertionSort();
@@ -69,7 +69,7 @@ class InsertionSortReverseTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.insertionSort();
@@ -95,7 +95,7 @@ class InsertShiftSortRandomTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.insertShiftSort();
@@ -121,7 +121,7 @@ class InsertBinaryShiftSortRandomTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.insertBinaryShiftSort();

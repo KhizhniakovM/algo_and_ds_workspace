@@ -14,7 +14,7 @@ class ShellSortRandomTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.shellSort();
@@ -40,7 +40,7 @@ class ShellSortDigitsTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.shellSort();
@@ -66,7 +66,7 @@ class ShellSortSortedTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.shellSort();
@@ -92,7 +92,7 @@ class ShellSortReverseTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.shellSort();

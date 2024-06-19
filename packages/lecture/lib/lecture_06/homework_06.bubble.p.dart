@@ -16,7 +16,7 @@ class BubbleSortRandomTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.bubbleSort();
@@ -44,7 +44,7 @@ class BubbleSortDigitsTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.bubbleSort();
@@ -72,7 +72,7 @@ class BubbleSortSortedTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.bubbleSort();
@@ -100,7 +100,7 @@ class BubbleSortReverseTask implements Task {
   @override
   String run(List<String> data, {required Stopwatch stopwatch}) {
     final list = data[1].split(' ').map((n) => int.parse(n)).toList();
-    final resolver = SimpleSorter.fromList(list: list);
+    final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
     resolver.bubbleSort();
