@@ -5,9 +5,10 @@ import 'package:tester/tester.dart';
 
 part 'homework_06.bubble.p.dart';
 part 'homework_06.insert.p.dart';
+part 'homework_06.shell.p.dart';
 
 Future<void> launch() async {
-  final task = InsertBinaryShiftSortRandomTask();
+  final task = ShellSortReverseTask();
   final tester = Tester(task);
-  tester.run(withOutput: false);
+  tester.run(showExpectActual: false);
 }
