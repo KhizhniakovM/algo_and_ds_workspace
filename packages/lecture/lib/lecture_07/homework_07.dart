@@ -6,7 +6,7 @@ import '../lecture_06/sorter.dart';
 part 'homework_07.selection.p.dart';
 
 Future<void> launch() async {
-  final task = SelectionSortRandomTask();
+  final task = SelectionSortReverseTask();
   final tester = Tester(task);
   tester.run(showExpectActual: false);
 }
