@@ -3,10 +3,11 @@ import 'package:tester/tester.dart';
 
 import '../lecture_06/sorter.dart';
 
+part 'homework_07.heap.p.dart';
 part 'homework_07.selection.p.dart';
 
 Future<void> launch() async {
-  final task = SelectionSortReverseTask();
+  final task = HeapSortReverseTask();
   final tester = Tester(task);
   tester.run(showExpectActual: false);
 }

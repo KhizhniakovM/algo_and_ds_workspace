@@ -27,3 +27,30 @@ extension SelectionSort on Sorter {
     return max;
   }
 }
+
+extension HeapSort on Sorter {
+  /// O         | M     | <> сравнение | = присваивание | adaptive | stable | online
+  /// n * log n | log n | -            | -              | -        | -      | -
+  void heapSort() {
+    for (int h = n ~/ 2 - 1; h >= 0; h--) {
+      _heapify(h, n);
+    }
+
+    for (int j = n - 1; j > 0; j--) {
+      swap(0, j);
+      _heapify(0, j);
+    }
+  }
+
+  void _heapify(int root, int size) {
+    int max = root;
+    int l = 2 * max + 1;
+    int r = 2 * max + 2;
+
+    if (l < size && more(list[l], list[max])) max = l;
+    if (r < size && more(list[r], list[max])) max = r;
+    if (max == root) return;
+    swap(root, max);
+    _heapify(max, size);
+  }
+}

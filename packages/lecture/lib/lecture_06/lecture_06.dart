@@ -1,5 +1,5 @@
 // Visualization of sorting algorithms
-// https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
+// https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
 import 'sorter.dart';
 
