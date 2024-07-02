@@ -1,6 +1,10 @@
 // Visualization of sorting algorithms
 // https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
+// adaptive - подстраивает сложность в зависимости от отсортированности массива
+// stable - не меняет одинаковые элементы местами
+// online - можно добавлять новые элементы в процессе сортировки
+
 import 'sorter.dart';
 
 extension BubbleSort on Sorter {
