@@ -5,7 +5,7 @@ class Tester {
 
   Tester(this._task);
 
-  void run({bool withOutput = true, String? additionalInfo}) {
+  void run({bool showExpectActual = true}) {
     int number = 0;
     print('==================================================');
     print('µs == microseconds, ms == milliseconds');
@@ -22,7 +22,7 @@ class Tester {
         input,
         output,
         testNumber: number,
-        withOutput: withOutput,
+        showExpectActual: showExpectActual,
       )}\n');
 
       number++;
@@ -33,12 +33,12 @@ class Tester {
     String input,
     String output, {
     required int testNumber,
-    required bool withOutput,
+    required bool showExpectActual,
   }) {
     try {
       final dataString =
           File(input).readAsStringSync().replaceAll('\n', ' ').trim();
-      if (withOutput) print('Test #$testNumber input = $dataString');
+      if (showExpectActual) print('Test #$testNumber input = $dataString');
       final data = File(input).readAsLinesSync();
       final expect =
           File(output).readAsStringSync().replaceAll('\n', ' ').trim();
@@ -50,7 +50,7 @@ class Tester {
           ? result.write(' ${stopwatch.elapsedMilliseconds} ms')
           : result.write(' ${stopwatch.elapsedMicroseconds} µs');
       print(result.toString());
-      if (withOutput) {
+      if (showExpectActual) {
         print('Test #$testNumber expect = $expect, actual = $actual');
       }
 
