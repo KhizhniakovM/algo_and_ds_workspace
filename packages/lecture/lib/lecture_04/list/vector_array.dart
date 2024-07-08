@@ -1,5 +1,6 @@
 import 'array.dart';
 
+/// Массив, который динамически увеличивает свой размер на increment
 class VectorArray<T> implements Array<T> {
   List<T?> _list = List<T>.empty(growable: false);
 

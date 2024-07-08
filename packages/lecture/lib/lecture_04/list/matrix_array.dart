@@ -2,6 +2,7 @@ import 'package:lecture/lecture_04/list/factor_array.dart';
 
 import 'array.dart';
 
+/// Массив, который выглядит как матрица
 class MatrixArray<T> implements Array<T> {
   Array<List<T?>> _lists = FactorArray(increment: 2);
 

@@ -1,7 +1,7 @@
 /*
   Основные структуры данных
   ==================================================
-  Add
+  Add at the end of array
 
   Name              100_000        1_000_000        10_000_000          100_000_000         1_000_000_000
 
@@ -18,6 +18,10 @@
   MatrixArray(1000) 5 ms           19 ms             158 ms             1571 ms             16527 ms
 
   SdkArray          2 ms           10 ms             117 ms             1037 ms             14048 ms
+
+  Linked Lists
+
+  OneWayLinkedList  5824 ms        /                 /                  /                   / 
 
   ==================================================
   Insert at random index                    at start index        at last index
@@ -38,6 +42,10 @@
 
   SdkArray          4320 ms   /           / 8760 ms   /         / 3 ms      14 ms 
 
+  Linked Lists
+
+  OneWayLinkedList  9933 ms   /           / 4 ms      12 ms     / 5750 ms   / 
+
   ==================================================
   Remove from random index                from start index      from last index
 
@@ -56,5 +64,8 @@
   MatrixArray(1000) 10664 ms  /           / 21266 ms  /         / 3 ms      14 ms 
   
   SdkArray          4551 ms   /           / 10046 ms  /         / 1 ms      6 ms 
-  
+
+  Linked Lists
+
+  OneWayLinkedList  3723 ms   /           / 0 ms      /         / 6176 ms   / 
 */

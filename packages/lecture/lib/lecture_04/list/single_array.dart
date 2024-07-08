@@ -1,5 +1,7 @@
 import 'array.dart';
 
+
+/// Массив, который динамически увеличивает свой размер на 1
 class SingleArray<T> implements Array<T> {
   List<T?> _list = List<T>.empty(growable: false);
 

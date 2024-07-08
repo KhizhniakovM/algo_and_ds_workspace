@@ -1,5 +1,6 @@
 import 'array.dart';
 
+/// Массив, который динамически увеличивает свой размер в increment раз
 class FactorArray<T> implements Array<T> {
   List<T?> _list = List<T>.empty(growable: false);
 
