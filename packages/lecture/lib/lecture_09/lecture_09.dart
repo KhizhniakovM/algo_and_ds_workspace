@@ -34,7 +34,7 @@ extension BucketSort on Sorter {
       final bg = ((BigInt.from(list[i]) * BigInt.from(n)) ~/ BigInt.from(max));
       final bidx = bg.toInt();
       // Создаем ноду в самом начале списка
-      buckets[bidx].head = ListNode(value: list[i], next: buckets[bidx].head);
+      buckets[bidx].head = OneWayListNode(list[i], next: buckets[bidx].head);
       // Двигаем ноду по списку, чтобы она заняла свое место
       ListNode<int>? item = buckets[bidx].head;
 
