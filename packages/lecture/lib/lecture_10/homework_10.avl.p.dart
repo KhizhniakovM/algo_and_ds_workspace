@@ -1,11 +1,11 @@
 part of 'homework_10.dart';
 
-/// N = 1000; 1 ms
-/// N = 10000; 4 ms
-/// N = 100000; 47 ms
-/// N = 1000000; 805 ms
-/// N = 10000000; 16919 ms
-class BSTRandomTask implements Task {
+/// N = 1000; 13 ms
+/// N = 10000; 1549 ms
+/// N = 100000; - ms
+/// N = 1000000; - ms
+/// N = 10000000; - ms
+class AVLRandomTask implements Task {
   @override
   String get path => 'assets/sorting/0.random/';
 
@@ -15,7 +15,7 @@ class BSTRandomTask implements Task {
     final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
-    resolver.bstSort();
+    resolver.avlSort();
     stopwatch.stop();
 
     print(resolver);
@@ -24,12 +24,12 @@ class BSTRandomTask implements Task {
   }
 }
 
-/// N = 1000; 540 µs
-/// N = 10000; 2 ms
-/// N = 100000; 9 ms
-/// N = 1000000; 87 ms
-/// N = 10000000; 935 ms
-class BSTDigitsTask implements Task {
+/// N = 1000; 1 ms
+/// N = 10000; 5 ms
+/// N = 100000; 27 ms
+/// N = 1000000; 273 ms
+/// N = 10000000; 2706 ms
+class AVLDigitsTask implements Task {
   @override
   String get path => 'assets/sorting/1.digits/';
 
@@ -39,7 +39,7 @@ class BSTDigitsTask implements Task {
     final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
-    resolver.bstSort();
+    resolver.avlSort();
     stopwatch.stop();
 
     print(resolver);
@@ -48,12 +48,12 @@ class BSTDigitsTask implements Task {
   }
 }
 
-/// N = 1000; 4 ms
-/// N = 10000; 66 ms
-/// N = 100000; 1218 ms
-/// N = 1000000; 12270 ms
-/// N = 10000000; Stack Overflow
-class BSTSortedTask implements Task {
+/// N = 1000; 18 ms
+/// N = 10000; 1661 ms
+/// N = 100000; - ms
+/// N = 1000000; - ms
+/// N = 10000000; - ms
+class AVLSortedTask implements Task {
   @override
   String get path => 'assets/sorting/2.sorted/';
 
@@ -63,7 +63,7 @@ class BSTSortedTask implements Task {
     final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
-    resolver.bstSort();
+    resolver.avlSort();
     stopwatch.stop();
 
     print(resolver);
@@ -73,11 +73,11 @@ class BSTSortedTask implements Task {
 }
 
 /// N = 1000; 15 ms
-/// N = 10000; Stack Overflow
-/// N = 100000; Stack Overflow
-/// N = 1000000; Stack Overflow
-/// N = 10000000; Stack Overflow
-class BSTReverseTask implements Task {
+/// N = 10000; 1339 ms
+/// N = 100000; - ms
+/// N = 1000000; - ms
+/// N = 10000000; - ms
+class AVLReverseTask implements Task {
   @override
   String get path => 'assets/sorting/3.revers/';
 
@@ -87,7 +87,7 @@ class BSTReverseTask implements Task {
     final resolver = Sorter.fromList(list: list);
 
     stopwatch.start();
-    resolver.bstSort();
+    resolver.avlSort();
     stopwatch.stop();
 
     print(resolver);

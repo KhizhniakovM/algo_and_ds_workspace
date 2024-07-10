@@ -27,9 +27,12 @@ extension BSTSort on Sorter {
     }
 
     int i = 0;
-    bst.dfs(bst.root, use: (val) {
-      list[i] = val;
-      i++;
+    bst.dfs(use: (node) {
+      while (node.count > 0) {
+        list[i] = node.value;
+        node.count -= 1;
+        i++;
+      }
     });
   }
 }
@@ -42,9 +45,12 @@ extension AVLSort on Sorter {
     }
 
     int i = 0;
-    avl.dfs(avl.root, use: (val) {
-      list[i] = val;
-      i++;
+    avl.dfs(use: (node) {
+      while (node.count > 0) {
+        list[i] = node.value;
+        node.count -= 1;
+        i++;
+      }
     });
   }
 }

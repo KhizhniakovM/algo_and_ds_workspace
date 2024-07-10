@@ -7,7 +7,7 @@ part 'homework_10.avl.p.dart';
 part 'homework_10.bst.p.dart';
 
 Future<void> launch() async {
-  final task = AVLRandomTask();
+  final task = AVLReverseTask();
   final tester = Tester(task);
   tester.run(showExpectActual: false);
 }

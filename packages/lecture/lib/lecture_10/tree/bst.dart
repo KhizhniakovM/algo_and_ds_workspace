@@ -1,6 +1,6 @@
 import 'tree.dart';
 
-class BSTree<T extends Comparable> extends Tree<T> {
+class BSTree<T extends Comparable> implements Tree<T> {
   @override
   BSTNode<T>? get root => _root;
   BSTNode<T>? _root;
@@ -16,8 +16,9 @@ class BSTree<T extends Comparable> extends Tree<T> {
     if (value.compareTo(node.value) > 0) {
       node.right = _insertAt(node.right, value);
     }
-    // На данном этапе представим, что в нашем дереве не может быть одинаковых элементов
-    // if (value.compareTo(node.value) == 0) {}
+    if (value.compareTo(node.value) == 0) {
+      node.count += 1;
+    }
 
     return node;
   }
@@ -32,6 +33,11 @@ class BSTree<T extends Comparable> extends Tree<T> {
     }
     if (value.compareTo(node.value) > 0) {
       node.right = _remove(node.right, value);
+    }
+
+    if (node.count > 1) {
+      node.count -= 1;
+      return node;
     }
 
     if (node.left == null) {
@@ -65,6 +71,19 @@ class BSTree<T extends Comparable> extends Tree<T> {
 
     return _search(node.left, value);
   }
+
+  @override
+  void dfs({void Function(BSTNode<T> node)? use}) => _dfs(_root, use: use);
+  void _dfs(
+    BSTNode<T>? node, {
+    void Function(BSTNode<T> node)? use,
+  }) {
+    if (node == null) return;
+
+    _dfs(node.left, use: use);
+    use?.call(node);
+    _dfs(node.right, use: use);
+  }
 }
 
 class BSTNode<T extends Comparable> implements Node<T> {
@@ -80,4 +99,6 @@ class BSTNode<T extends Comparable> implements Node<T> {
 
   @override
   BSTNode<T>? right;
+
+  int count = 1;
 }
