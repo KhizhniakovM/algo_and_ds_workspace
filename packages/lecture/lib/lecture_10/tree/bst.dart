@@ -90,10 +90,6 @@ class BSTNode<T extends Comparable> implements Node<T> {
   @override
   T value;
 
-  BSTNode({
-    required this.value,
-  });
-
   @override
   BSTNode<T>? left;
 
@@ -101,4 +97,6 @@ class BSTNode<T extends Comparable> implements Node<T> {
   BSTNode<T>? right;
 
   int count = 1;
+
+  BSTNode({required this.value});
 }

@@ -5,18 +5,12 @@ abstract interface class Tree<T extends Comparable> {
   Node<T>? search(T value);
   void remove(T value);
 
-  void dfs({
-    void Function(Node<T> node)? use,
-  });
+  void dfs({void Function(Node<T> node)? use});
 }
 
 abstract interface class Node<T extends Comparable> {
-  T value;
+  T get value;
 
   Node<T>? get left;
   Node<T>? get right;
-
-  Node({
-    required this.value,
-  });
 }

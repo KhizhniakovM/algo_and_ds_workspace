@@ -123,14 +123,6 @@ class AVLNode<T extends Comparable> implements Node<T> {
   @override
   T value;
 
-  AVLNode({
-    required this.value,
-  });
-
-  int get height => max(left?.height ?? 0, right?.height ?? 0) + 1;
-
-  int get balance => (right?.height ?? 0) - (left?.height ?? 0);
-
   @override
   AVLNode<T>? left;
 
@@ -138,4 +130,10 @@ class AVLNode<T extends Comparable> implements Node<T> {
   AVLNode<T>? right;
 
   int count = 1;
+
+  int get height => max(left?.height ?? 0, right?.height ?? 0) + 1;
+
+  int get balance => (right?.height ?? 0) - (left?.height ?? 0);
+
+  AVLNode({required this.value});
 }

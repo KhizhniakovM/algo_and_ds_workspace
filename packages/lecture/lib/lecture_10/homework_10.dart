@@ -5,9 +5,10 @@ import '../lecture_06/sorter.dart';
 
 part 'homework_10.avl.p.dart';
 part 'homework_10.bst.p.dart';
+part 'homework_10.treap.p.dart';
 
 Future<void> launch() async {
-  final task = AVLReverseTask();
+  final task = TreapReverseTask();
   final tester = Tester(task);
   tester.run(showExpectActual: false);
 }
