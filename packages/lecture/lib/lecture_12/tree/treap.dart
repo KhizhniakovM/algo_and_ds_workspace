@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'tree.dart';
+import '../../lecture_10/tree/tree.dart';
 
 /// Tree + Heap
 class Treap<T extends Comparable> implements Tree<T> {

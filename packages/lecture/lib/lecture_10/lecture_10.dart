@@ -18,7 +18,6 @@
 import '../lecture_06/sorter.dart';
 import 'tree/avl.dart';
 import 'tree/bst.dart';
-import 'tree/treap.dart';
 
 extension BSTSort on Sorter {
   void bstSort() {
@@ -52,21 +51,6 @@ extension AVLSort on Sorter {
         node.count -= 1;
         i++;
       }
-    });
-  }
-}
-
-extension TreapSort on Sorter {
-  void treapSort() {
-    final treap = Treap<int>();
-    for (int i = 0; i < n; i++) {
-      treap.insert(list[i]);
-    }
-
-    int i = 0;
-    treap.dfs(use: (node) {
-      list[i] = node.value;
-      i++;
     });
   }
 }

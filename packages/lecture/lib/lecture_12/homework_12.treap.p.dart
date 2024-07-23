@@ -1,4 +1,4 @@
-part of 'homework_10.dart';
+part of '../lecture_12/homework_12.dart';
 
 /// N = 1000; 3 ms
 /// N = 10000; 9 ms
