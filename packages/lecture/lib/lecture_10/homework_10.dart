@@ -8,6 +8,6 @@ part 'homework_10.bst.p.dart';
 
 Future<void> launch() async {
   final task = AVLReverseTask();
-  final tester = Tester(task);
+  final tester = TesterSort(task);
   tester.run(showExpectActual: false);
 }

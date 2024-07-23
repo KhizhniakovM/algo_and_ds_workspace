@@ -6,20 +6,25 @@ import 'package:tester/tester.dart';
 
 FutureOr<void> launch() {
   final task = HappyTicketsTask();
-  final tester = Tester(task);
+  final tester = TesterSort(task);
   tester.run();
 }
 
 class HappyTicketsTask implements Task {
   @override
   String get path => 'assets/happy_tickets/';
-  
+
   @override
-  String run(List<String> data) {
+  String run(List<String> data, {required Stopwatch stopwatch}) {
     final input = int.tryParse(data[0]);
     if (input == null) throw Exception('Input is not valid');
     final resolver = HappyTickets();
-    return resolver.seniorSolution(input).toString();
+
+    stopwatch.start();
+    final result = resolver.seniorSolution(input);
+    stopwatch.stop();
+
+    return result.toString();
   }
 }
 

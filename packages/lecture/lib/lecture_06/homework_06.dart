@@ -11,6 +11,6 @@ part 'homework_06.shell.p.dart';
 
 Future<void> launch() async {
   final task = ShellSortReverseTask();
-  final tester = Tester(task);
+  final tester = TesterSort(task);
   tester.run(showExpectActual: false);
 }

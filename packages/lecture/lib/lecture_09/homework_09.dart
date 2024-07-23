@@ -10,6 +10,6 @@ part 'homework_09.tim.p.dart';
 
 Future<void> launch() async {
   final task = TimSortReverseTask();
-  final tester = Tester(task);
+  final tester = TesterSort(task);
   tester.run(showExpectActual: false);
 }

@@ -8,6 +8,6 @@ part 'homework_07.selection.p.dart';
 
 Future<void> launch() async {
   final task = HeapSortReverseTask();
-  final tester = Tester(task);
+  final tester = TesterSort(task);
   tester.run(showExpectActual: false);
 }

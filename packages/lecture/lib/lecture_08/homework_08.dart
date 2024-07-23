@@ -8,6 +8,6 @@ part 'homework_08.quick.p.dart';
 
 Future<void> launch() async {
   final task = MergeSortReverseTask();
-  final tester = Tester(task);
+  final tester = TesterSort(task);
   tester.run(showExpectActual: false);
 }
