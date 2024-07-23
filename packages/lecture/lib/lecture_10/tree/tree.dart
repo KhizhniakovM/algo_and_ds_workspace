@@ -9,7 +9,7 @@ abstract interface class Tree<T extends Comparable> {
 }
 
 abstract interface class Node<T extends Comparable> {
-  T get value;
+  T? get value;
 
   Node<T>? get left;
   Node<T>? get right;
