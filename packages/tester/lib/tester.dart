@@ -1,5 +1,6 @@
 import 'dart:io';
 
+part 'tester.dictionary.p.dart';
 part 'tester.hash_map.p.dart';
 part 'tester.sort.p.dart';
 
